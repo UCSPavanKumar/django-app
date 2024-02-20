@@ -2,19 +2,55 @@
 {% include 'journal/header.html' %}
 
 {% block content %}
+<br>
+<br>
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
             <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+              {% load static %}
+                <img src="{% static 'journal/analytics.png' %}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title roboto-black">Trading Analytics</h5>
+                  <p class="card-text roboto-light">Analysing trades by daily,weekly,monthly for refinement of strategy or risk.</p>
                 </div>
               </div>
         </div>
+        <div class="col-sm-6">
+          <div class="card" style="width: 18rem;">
+            {% load static %}
+              <img src="{% static 'journal/organise.png' %}" class="card-img-top" alt="..." width="100px">
+              <div class="card-body" >
+                <h5 class="card-title roboto-black">Organising Trades</h5>
+                <p class="card-text roboto-light">A centralised location for logging all our trades will help us get better insights on our trades</p>
+              </div>
+            </div>
+      </div>
     </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-sm-6">
+          <div class="card" style="width: 18rem;">
+            {% load static %}
+              <img src="{% static 'journal/emotion.jpg' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title roboto-black">Emotions Log</h5>
+                <p class="card-text roboto-light">During trading,we may face lot of emotions which will hinder our focus.We help to record your emotions on each trade.</p>
+              </div>
+            </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card" style="width: 18rem;">
+          {% load static %}
+            <img src="{% static 'journal/organise.png' %}" class="card-img-top" alt="..." width="100px">
+            <div class="card-body" >
+              <h5 class="card-title roboto-black">Motivation</h5>
+              <p class="card-text roboto-light">Some get motivated naturally,some need external motivation for achieving goals.Daily Motivation to our traders for a fresh start everyday leaving the past behind.</p>
+            </div>
+          </div>
+    </div>
+  </div>
 
 </div>
 {% endblock %}
