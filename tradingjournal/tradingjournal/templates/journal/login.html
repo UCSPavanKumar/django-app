@@ -1,0 +1,44 @@
+
+{% include 'journal/header.html' %}
+<br>
+<br>
+<head>
+    <script>
+        function setCurrentPage()
+        {
+            a_tag = document.getElementsByTagName("a")
+            for(var i=0;i<a_tag.length;i++)
+            {
+                if(a_tag[i].innerText == "Login")
+                {
+                    a_tag[i].setAttribute("aria-current","page")
+                }
+                if(a_tag[i].innerText == "Home")
+                {
+                    a_tag[i].removeAttribute("aria-current")
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="setCurrentPage()">
+<div class="container roboto-medium">
+    <table class="table table-bordered">
+        <tr>
+            <th colspan="2" style="text-align: center;">Login</th>
+        </tr>
+        <tr>
+            <th>Username</th>
+            <td><input type="text"  width="50px" id="user_name" class="form-control roboto-light" style="border-color: black;border-radius: 2px;"></td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td><input type="password" id="user_pass" class="form-control roboto-light" style="border-color: black;border-radius: 2px;"></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-warning" onclick="verify()">Login</button></td>
+        </tr>
+    </table>
+    <div><a href="#" style="text-decoration: none;color: black;">Signup</a><a href="#" style="margin-left: 100px; text-decoration: none;color: black;">Forgot Password ?</a></div>
+</div>
+</body>
