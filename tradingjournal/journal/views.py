@@ -14,3 +14,10 @@ class LoginView(View):
         return render(request,'journal/login.html',{'title':'Login'})
     
 login_view = LoginView.as_view()
+
+
+class RegisterView(View):
+    def get(self,request):
+        return render(request,'journal/register.html',{'title':'Sign Up'})
+    
+register_view = RegisterView.as_view()
